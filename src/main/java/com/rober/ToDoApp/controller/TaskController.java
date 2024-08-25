@@ -17,6 +17,7 @@ public class TaskController {
     private TaskService taskService;
 
     @GetMapping
+    @CrossOrigin
     public List<Task> getAllTasks(){
         return taskService.getAllTasks();
     }
@@ -27,6 +28,7 @@ public class TaskController {
     }
 
     @PostMapping
+    @CrossOrigin
     public ResponseEntity<Object> createTask(@RequestBody Task task){
         return taskService.createTask(task);
     }
